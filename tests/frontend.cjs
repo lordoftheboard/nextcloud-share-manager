@@ -1,0 +1,16 @@
+const assert = require('node:assert/strict');
+const {shareMatches} = require('../js/main.js');
+const node = {name: 'subordner'};
+const defaults = {query:'', foreign:false, below:false, deviation:false};
+const owner = {name:'Projekt',path:'/Projekt',recipient:'B',grantedBy:'A',members:['B'],foreign:false,belowTop:false,deviation:false};
+const reshare = {...owner,recipient:'D',grantedBy:'C',members:['D'],path:'/Projekt/subordner',foreign:true,belowTop:true,deviation:true};
+const equivalent = {...owner,path:'/Projekt/subordner',belowTop:true};
+assert.equal(shareMatches(reshare,node,{...defaults,foreign:true,below:true,deviation:true}),true);
+assert.equal(shareMatches(owner,node,{...defaults,foreign:true}),false);
+assert.equal(shareMatches(owner,node,{...defaults,below:true}),false);
+assert.equal(shareMatches(equivalent,node,{...defaults,below:true,deviation:true}),false);
+assert.equal(shareMatches(reshare,node,{...defaults,query:'c'}),true);
+assert.equal(shareMatches(reshare,node,{...defaults,query:'d'}),true);
+assert.equal(shareMatches(reshare,node,{...defaults,query:'projekt/subordner'}),true);
+assert.equal(shareMatches(reshare,node,{...defaults,query:'unbekannt'}),false);
+console.log('PASS: Three independent and combined filters; grantor, recipient and path search');

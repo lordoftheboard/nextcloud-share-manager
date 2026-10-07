@@ -1,0 +1,25 @@
+#share-manager { padding: 28px; width: 100%; overflow: auto; background: var(--color-main-background); color: var(--color-main-text); }
+#share-manager h1 { font-size: 28px; font-weight: bold; margin-bottom: 12px; }
+#share-manager h2 { font-size: 21px; font-weight: bold; margin: 16px 0; }
+#share-manager h3 { font-size: 17px; font-weight: bold; margin: 12px 0; }
+#share-manager p { margin-bottom: 12px; overflow-wrap: anywhere; }
+.share-toolbar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin: 20px 0; }
+#share-search { width: min(380px, 100%); }
+#share-manager select { max-width: 100%; min-width: 180px; }
+.share-filters { display: flex; gap: 20px; flex-wrap: wrap; margin: 16px 0; padding: 12px; border: 1px solid var(--color-border); border-radius: 8px; }
+.share-filters legend { font-weight: bold; }
+.share-filters label, .shared-access-option { display: flex; gap: 8px; align-items: center; }
+#share-manager input[type=checkbox] { appearance: auto; width: 18px; height: 18px; flex-shrink: 0; }
+.tree-section { margin: 24px 0; }
+.tree-node { margin: 12px 0; border-left: 2px solid var(--color-primary-element); }
+.tree-node > summary { padding: 12px; cursor: pointer; font-weight: bold; background: var(--color-background-hover); overflow-wrap: anywhere; }
+.tree-node-body { padding: 8px 12px 8px 22px; }
+.share-card { margin: 10px 0; padding: 12px; border: 1px solid var(--color-border); border-radius: 8px; }
+.share-description { font-weight: bold; }
+.share-meta, .context-note, .inherited-share, .tree-users, .revoke-note { color: var(--color-text-maxcontrast); font-size: 13px; }
+.revoke-panel { margin: 28px 0; padding: 20px; border: 1px solid var(--color-border); border-radius: 12px; }
+.shared-access-option { align-items: flex-start; margin: 16px 0; }
+.access-warning { padding: 12px; border-left: 4px solid var(--color-warning); background: var(--color-background-hover); }
+#revoke-plan ul { list-style: disc; padding-left: 22px; }
+#revoke-confirm { margin: 16px 0; }
+@media (max-width: 600px) { #share-manager { padding: 14px; } .tree-node-body { padding-left: 12px; } }

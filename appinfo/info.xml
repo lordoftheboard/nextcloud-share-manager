@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+  <id>sharemanager</id>
+  <name>Share Manager</name>
+  <summary>Ordnerbäume und Weiterfreigaben verwalten</summary>
+  <description>Eigentümerübersicht über Freigaben und Weiterfreigaben, Abweichungsfilter und hierarchischer Rechteentzug mit Vorschau.</description>
+  <version>0.2.0</version>
+  <licence>agpl</licence>
+  <author>Share Manager contributors</author>
+  <namespace>ShareManager</namespace>
+  <category>files</category>
+  <dependencies>
+    <php min-version="8.1"/>
+    <nextcloud min-version="30" max-version="33"/>
+  </dependencies>
+  <navigations>
+    <navigation>
+      <name>Share Manager</name>
+      <route>sharemanager.page.index</route>
+      <order>20</order>
+    </navigation>
+  </navigations>
+</info>
