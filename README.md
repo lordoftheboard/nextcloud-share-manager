@@ -43,7 +43,9 @@ Das ist ein **Entzug des aktuellen Freigabezugriffs im ausgewählten Baum**, kei
 
 Voraussetzung: Nextcloud 30–33. Entwicklungsvalidierung erfolgt auf Nextcloud 33 mit PHP 8.4; ältere Versionen wurden nicht separat getestet.
 
-1. Das Archiv `build/sharemanager-0.2.0.tar.gz` in `custom_apps` entpacken. Alternativ `appinfo`, `lib`, `templates`, `js`, `css`, `img` und `LICENSE` nach `custom_apps/sharemanager` kopieren.
+Die fertigen TAR.GZ- und ZIP-Pakete und die SHA-256-Prüfsummen liegen in [`dist`](dist). Die kurze Installationsanleitung steht in [INSTALL.md](INSTALL.md). Ein Paket lässt sich mit `python3 scripts/build.py` ohne weitere Abhängigkeiten erneut erzeugen.
+
+1. Das Archiv `dist/sharemanager-0.2.0.tar.gz` in `custom_apps` entpacken. Alternativ `appinfo`, `lib`, `templates`, `js`, `css`, `img` und `LICENSE` nach `custom_apps/sharemanager` kopieren.
 2. Als Webserver-Benutzer `php occ app:enable sharemanager` ausführen. Bei einem Update anschließend `php occ upgrade` ausführen.
 3. **Share Manager** im Nextcloud-App-Menü öffnen.
 
